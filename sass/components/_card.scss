@@ -3,6 +3,12 @@
     -moz-perspective: 150rem;
     position: relative;
     height: 52rem;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 4rem;
+    }
     
     &__side{
     height: 52rem;

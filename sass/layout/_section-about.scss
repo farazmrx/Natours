@@ -30,3 +30,21 @@
         margin-bottom: 3rem;
     }
 }
+
+.about {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        flex: 0 0 45%;
+    }
+
+    &__image {
+        flex: 0 0 50%;
+    }
+}
+
+
+
