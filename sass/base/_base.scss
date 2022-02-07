@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $body-color;
+    padding: 3rem;
+}
+
+.my-row {
+    width: 960px;
+    margin: 0 auto;
+}

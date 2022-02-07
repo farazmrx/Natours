@@ -1,0 +1,15 @@
+{
+  "name": "outdoor-pro",
+  "version": "1.0.0",
+  "description": "this is a first sass pro",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss dist/style.css -w",
+    "compile:sass": "node-sass sass/main.scss dist/style.css"
+  },
+  "author": "faraz vaissi",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.0"
+  }
+}
