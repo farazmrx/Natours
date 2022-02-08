@@ -1,0 +1,46 @@
+//MEdia Query
+/* 
+0 - 500 phone
+501 - 768 ipad, teblet
+769 - 1024 small screen, laptop
+1025 - 1200 large screen, Desktop
+1200 - 1800 is where our normal style apply
+1800px ++ big screen, TV
+*/
+
+/* 
+$breakpoint argument choices:
+- phone 400
+- tablet
+- laptop
+- Desktop
+- ourstyle
+- big-desktop
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == smallphone {
+        @media (max-width: 25em) {@content};    //400px
+    }
+
+    @if $breakpoint == phone {
+        @media (max-width: 31.25em) {@content};    //500px
+    }
+
+    @if $breakpoint == tablet {
+        @media (max-width: 48em) {@content};    //768px
+    }
+
+    @if $breakpoint == laptop {
+        @media (max-width: 64em) {@content};    //1024px
+    }
+
+    @if $breakpoint == Desktop {
+        @media (max-width: 75em) {@content};    //1200px
+    }
+
+    @if $breakpoint == bigdesktop {
+        @media (min-width: 112.5em) {@content};    //1800px
+    }
+}
