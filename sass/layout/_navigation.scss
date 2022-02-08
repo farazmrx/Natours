@@ -16,6 +16,11 @@
         z-index: 2000;
         box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: .3);
         text-align: center;
+
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__background {
@@ -28,6 +33,11 @@
         background: radial-gradient($Light-green, $Dark-green);
         z-index: 1000;
         transition: transform .8s;
+
+        @include respond(phone) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__nav {

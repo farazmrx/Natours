@@ -5,8 +5,26 @@
     text-align: center;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($black-color, .2);
-    width: 25rem;
+    // width: 25rem;
     transition: all .4s;
+    &:not(:last-child) {
+        margin-right: 2rem;
+    }
+
+    @include respond(tablet) {
+        // width: 20rem;
+    }
+
+    @include respond(phone) {
+        // width: 60%;
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        // font-size: 1.8rem;
+        &:not(:last-child) {
+            margin-right: 0;
+        }
+    }
 
     &__icon {
         font-size: 6rem;
@@ -14,6 +32,14 @@
         -webkit-background-clip: text;
         -moz-background-clip: text;
         color: transparent;
+
+        @include respond(laptop) {
+            font-size: 4rem;
+        }
+
+        @include respond(phone) {
+            font-size: 6rem;
+        }
     }
 
     &:hover {
@@ -26,5 +52,13 @@
     &__container {
         display: flex;
         justify-content: space-between;
+        @include respond(laptop) {
+            justify-content: space-around;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+            align-items: center; 
+        }
     }
 }

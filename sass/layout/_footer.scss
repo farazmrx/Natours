@@ -3,6 +3,10 @@
     padding: 10rem 0;
     font-size: 1.4rem;
 
+    @include respond(phone) {
+        padding: 7rem 0;
+    }
+
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
@@ -43,10 +47,22 @@
         text-align: center;
         border-top: 1px solid $color-gray-light-1;
         padding-top: 1rem;
+
+        @include respond(tablet) {
+            border-top: none;
+        }
     }
 
     &__container {
         display: flex;
         justify-content: space-between;
+
+        @include respond(laptop) {
+            justify-content: space-around;
+        }
+
+        @include respond(tablet) {
+            flex-direction: column;
+        }
     }
 }

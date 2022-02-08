@@ -9,6 +9,16 @@
     font-size: $default-font-size;
     transform: skewX(-15deg);
 
+    @include respond(phone) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(smallphone) {
+        transform: skewX(0);
+    }
+
     &__shape {
         width: 12rem;
         height: 12rem;
@@ -19,7 +29,11 @@
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-2.5rem) skewX(15deg);
         position: relative;
+        
 
+        @include respond(smallphone) {
+            transform: translateX(-2.5rem) skewX(0);
+        }
     }
 
     &__img {
@@ -30,6 +44,10 @@
 
     &__text {
         transform: skewX(15deg);
+
+        @include respond(smallphone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {

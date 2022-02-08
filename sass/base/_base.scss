@@ -47,9 +47,17 @@ body{
     line-height: 1.7;
     color: $body-color;
     padding: 3rem;
+
+    @include respond(laptop) {
+        padding: 0;
+    }
 }
 
 .container {
     max-width: 114rem;
     margin: 0 auto;
+
+    @include respond(phone) {
+        max-width: 50rem;
+    }
 }

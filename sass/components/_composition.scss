@@ -1,26 +1,56 @@
 .composition {
     position: relative;
+    display: flex;
+    justify-content: center;
 
     &__photo {
         position: absolute;
         width: 55%;
+        border-radius: 2px;
         box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: .4);
+        z-index: 10;
         transition: all .2s;
         outline-offset: 2rem;
+
+        @include respond(phone) {
+            position: relative;
+            width: 32%;
+            box-shadow: 0 1.5rem 3rem rgba($color: #000000, $alpha: .3);
+            outline-offset: 0;
+            border-radius: 0;
+            margin-top: 1.6rem;
+        }
 
         &--p1{
             top: -2rem;
             left: 0;
+            
+            @include respond(phone) {
+                top: 1rem;
+                left: 0;
+            }
         }
 
         &--p2{
             top: 2rem;
             right: 0;
+
+            @include respond(phone) {
+                top: 0;
+                left: 0;
+                z-index: 20;
+                width: 33%;
+            }
         }
 
         &--p3{
             left: 20%;
             top: 10rem;
+
+            @include respond(phone) {
+                top: 1rem;
+                left: 0;
+            }
         }
 
         &:hover {
@@ -28,6 +58,13 @@
             transform: scale(1.1) translateY(-.5rem);
             box-shadow: rgba($color: #000000, $alpha: .6);
             z-index: 20;
+
+            @include respond(phone) {
+                outline: none;
+                transform: none;
+                box-shadow: none;
+                z-index: 0;
+            }
         }
     }
 

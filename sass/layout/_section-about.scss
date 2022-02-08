@@ -2,6 +2,10 @@
     background-color: $color-gray-light-1;
     padding: 25rem 0;
     margin-top: -20vh;
+
+    @include respond(phone) {
+        padding: 20rem 0;
+    }
 }
 
 
@@ -15,6 +19,15 @@
     -webkit-background-clip: text;
     -moz-background-clip: text;
     color: transparent;
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
+
+    @include respond(smallphone) {
+        font-size: 2.3rem;
+        letter-spacing: .1rem;
+    }
 }
 
 .heading-tertiary {
@@ -35,6 +48,14 @@
     &__container {
         display: flex;
         justify-content: space-between;
+
+        @include respond(laptop) {
+            justify-content: space-around;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
     }
 
     &__text {

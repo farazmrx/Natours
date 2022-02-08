@@ -8,6 +8,16 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 4rem;
+
+        @include respond(tablet) {
+            column-gap: 2rem;
+        }
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            row-gap: 4rem;
+        }
     }
     
     &__side{
@@ -83,6 +93,9 @@
         top: 12rem;
         right: 2rem;
         width: 75%;
+        @include respond(tablet) {
+            font-size: 2.3rem;
+        }
     }
 
     &__heading-span {
@@ -144,5 +157,71 @@
     &__price-value{
         font-size: 6rem;
         font-weight: 100;
+    }
+
+    @include respond(tablet) {
+        height: auto;
+        border-radius: 3px;
+        background-color: $white-color;
+        box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: .15);
+    
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 4rem;
+    
+            @include respond(tablet) {
+                column-gap: 2rem;
+            }
+    
+            @include respond(phone) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                row-gap: 4rem;
+            }
+        }
+        
+        &__side{
+        height: auto;
+        position: relative;
+        box-shadow: none;
+    
+        &--back{
+            transform: rotateY(0);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }
+        }
+    
+        &:hover &__side--front{
+            transform: rotateY(0);
+        }
+
+        &__details {
+            padding: 1rem 3rem;
+        }
+    
+        &__cta {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            text-align: center;
+            padding: 7rem 4rem 4rem 4rem;
+        }
+    
+        &__price-box{
+            margin-bottom: 3rem;
+        }
+    
+        &__price-only{
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+    
+        &__price-value{
+            font-size: 4rem;
+            font-weight: 300;
+        }       
     }
 }

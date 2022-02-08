@@ -9,22 +9,38 @@
     & > * {
         transform: skewY(7deg);
     }
+
+    @include respond(phone) {
+        padding: 15rem;
+    }
 }
 
 .section-card {
     background-color: $color-gray-light-1;
     padding: 25rem 0 12rem 0;
     margin-top: -10rem;
+
+    @include respond(phone) {
+        padding: 20rem 0 9rem 0;
+    }
 }
 
 .section-stories {
     position: relative;
     padding: 15rem 0;
+
+    @include respond(phone) {
+        padding: 10rem 0;
+    }
 }
 
 .section-book {
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom, $Light-green, $Dark-green);
+
+    @include respond(phone) {
+        padding: 10rem 0;
+    }
 }
 
 .book {
@@ -33,10 +49,24 @@
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: .25);
 
-    height: 50rem;
+    @include respond(tablet) {
+        background-image: linear-gradient(105deg, rgba($white-color, .9)70%, rgba(transparent, 0)70%),url(../img/nat-10.jpg);
+    }
+
+    @include respond(phone) {
+        background-image: linear-gradient(to right, rgba($white-color, .9)100%, rgba(transparent, 0)100%),url(../img/nat-10.jpg);
+    }
 
     &__form {
         width: 50%;
         padding: 6rem;
+
+        @include respond(tablet) {
+            width: 70%;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
     }
 }
