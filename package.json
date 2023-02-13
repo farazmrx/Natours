@@ -10,6 +10,6 @@
   "author": "faraz vaissi",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^7.0.0"
+    "node-sass": "^8.0.0"
   }
 }
